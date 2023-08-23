@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* ===================== WEBKIT-SCROLLBAR ===================== */
+
+::-webkit-scrollbar {
+    width: .6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(175, 175, 175, 0.404);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(48, 48, 48);
+}
+
+body {
+    margin: 0;
+    background-color: #313131;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont_body {
+    width: 800px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: .8rem;
+}
+
+.alert {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    padding: .3rem 0;
+}
+
+.alert_success {
+    color: #ffffff;
+    background-color: rgba(13, 167, 59, 0.979);
+}
+
+.alert_red {
+    color: #ffffff;
+    background-color: #FF1700;
+}
+
+.includes_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.includes {
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pwd_label,
+.generated_pwd {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pwd_name,
+.input_box {
+    width: auto;
+    padding: .4rem .5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pwd_length {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lenght_txt {
+    font-size: .9rem;
+    margin: 0;
+}
+
+.pwd_num {
+    width: 4rem;
+    padding: .25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.include_txt {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.input_area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.input_copy {
+    position: absolute;
+    top: 25%;
+    left: 87%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #999;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    transition: .2s;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "\2714";
+    color: #fff;
+    transform: scale(0);
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #313131;
+    border-color: #313131;
+}
+
+.reduce_checkbox_opacity {
+    opacity: 50%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.generate_btn {
+    padding: .8rem;
+    background-color: #313131;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.generate_btn:hover {
+    background-color: #161616;
+    transition: .3s;
+}
+
+.copy {
+    color: #fff;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.saved_pwd_data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.saved_pwd_cont {
+    position: relative;
+    height: 10rem;
+    overflow: auto;
+}
+
+.saved_pwd_header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(128, 128, 128);
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.saved_pwd_title {
+    text-transform: capitalize;
+}
+
+.icons {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.editpwdicon {
+    color: rgba(10, 201, 51, 0.918);
+}
+
+.deletepwdicon {
+    color: rgba(255, 17, 0, 0.89);
+}
+
+.deletepwdicon,
+.editpwdicon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: fit-content;
+}
+
+.no_saved_pwd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: rgb(126, 126, 126);
+}
